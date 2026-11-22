@@ -18,8 +18,8 @@ export const WALLS = [
   { x: 380, y: 100, w: 200, h: 12, kind: 'vault' },
   { x: 380, y: 100, w: 12, h: 110, kind: 'vault' },
   { x: 568, y: 100, w: 12, h: 110, kind: 'vault' },
-  { x: 380, y: 198, w: 88, h: 12, kind: 'vault' },
-  { x: 492, y: 198, w: 88, h: 12, kind: 'vault' },
+  { x: 380, y: 198, w: 76, h: 12, kind: 'vault' },
+  { x: 504, y: 198, w: 76, h: 12, kind: 'vault' },
 ];
 
 // Cover that blocks both movement and sight.

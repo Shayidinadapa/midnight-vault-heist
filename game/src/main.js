@@ -1,7 +1,7 @@
 // main.js — the heist itself: loop, rules, alarm, loot, smoke, win/lose,
 // and the ?shot= poses the screenshots are taken from.
 
-import { W, H, LOOT, GUARDS, CAMERAS, SPAWN, EXIT, PLAYER_R, ALL_SOLIDS, moveCircle } from './level.js';
+import { W, H, LOOT, GUARDS, CAMERAS, SPAWN, EXIT, PLAYER_R, ALL_SOLIDS, SIGHT_BLOCKERS, moveCircle } from './level.js';
 import { Guard, Camera } from './guards.js';
 import { drawScene } from './render.js';
 import { sfx } from './audio.js';
@@ -229,6 +229,6 @@ bindInput();
 canvas.addEventListener('click', () => {
   if (s.state === 'title') reset();
 });
-if (params.get('debug')) window.__game = s; // playtest hook: read-only state
+if (params.get('debug')) { window.__game = s; window.__level = { SIGHT_BLOCKERS }; } // playtest hook: read-only state
 if (shot) stageShot(shot);
 requestAnimationFrame(frame);
